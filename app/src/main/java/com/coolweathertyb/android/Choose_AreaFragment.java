@@ -1,11 +1,10 @@
-package com.coolweather.android;
+package com.coolweathertyb.android;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,11 +17,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.coolweather.android.db.City;
-import com.coolweather.android.db.County;
-import com.coolweather.android.db.Province;
-import com.coolweather.android.util.HttpUtil;
-import com.coolweather.android.util.Utility;
+import com.coolweathertyb.android.R;
+import com.coolweathertyb.android.db.City;
+import com.coolweathertyb.android.db.County;
+import com.coolweathertyb.android.db.Province;
+import com.coolweathertyb.android.util.HttpUtil;
+import com.coolweathertyb.android.util.Utility;
 
 import org.litepal.crud.DataSupport;
 
@@ -124,6 +124,11 @@ public class Choose_AreaFragment extends Fragment {
                         WeatherActivity weatherActivity = (WeatherActivity) getActivity();
                         weatherActivity.drawerLayout.closeDrawers();
                         weatherActivity.swipeRefresh.setRefreshing(true);
+                         //清除缓存
+                        /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(weatherActivity);
+                        SharedPreferences.Editor editor =prefs.edit();
+                        editor.remove("weather");*/
+
                         weatherActivity.requestWeather(weatherId);
                     }
                 }

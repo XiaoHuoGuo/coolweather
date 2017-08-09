@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.coolweather.android.MainActivity">
+    tools:context="com.coolweather.android.com.coolweathertyb.android.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
          <fragment
              android:id="@+id/choose_area_fragment"
-             android:name="com.coolweather.android.Choose_AreaFragment"
+             android:name="com.coolweathertyb.android.Choose_AreaFragment"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              />

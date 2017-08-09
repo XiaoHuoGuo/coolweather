@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.coolweather.android.Choose_AreaFragment">
+    tools:context="com.coolweather.android.com.coolweathertyb.android.Choose_AreaFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
